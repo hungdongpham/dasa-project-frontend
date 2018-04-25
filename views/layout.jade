@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name='viewport', content='width=device-width, minimum-scale=1.0')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='/javascripts/constants.js')
+    script(src='/javascripts/utils.js')
+    script(src='/javascripts/user.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    style(type='text/css').
+      .container{
+      margin-top: 30px;
+      }
+      h3{
+      text-align:center;
+      }
+      .form-group{
+      margin-bottom: 15px;
+      display:flex;
+      }
+      .form-help{
+      text-align: center;
+      margin-bottom: 15px;
+      color: red;
+      }
+      button{
+      width: 100%;
+      }
+  body
+    block content

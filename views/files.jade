@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    #createFolderModal.modal.fade(role='dialog')
+      .modal-dialog
+        // Modal content
+        .modal-content
+          .modal-header
+            span.close(type='button', data-dismiss='modal') ×
+            h4.modal-title Thư mục mới
+          .modal-body
+            input#folderName(type='text')
+          .modal-footer
+            span#btn-create-folder.btn.btn-default(type='button', data-dismiss='modal') Create
+            span.btn.btn-default(type='button', data-dismiss='modal') Close
+    .container
+      .row
+        h3 Manage file
+        .form-help
+        .row.form-upload
+          .col-xs-2
+            form#uploadFile
+              span.btn.btn-primary.btn-file
+                | Upload file 
+                input#filePicker(name='file', type='file', single='')
+              input#folderId(type='hidden', name='folderId')
+            //
+              <button id="selectFile" onclick="return selectFileClick();">
+              Upload file
+              </button>
+          .col-xs-2
+            span.btn.btn-primary(data-toggle='modal', data-target='#createFolderModal')
+              | Create folder
+        div
+          table.table.table-bordered
+            thead
+              tr
+                th
+                  .row
+                    .col-xs-1
+                    .col-xs-5
+                      | Title
+                    .col-xs-1
+                      | Size
+            tbody.list-files
+              td.spinner-contains
+                .spinner
+                  .bounce1
+                  .bounce2
+                  .bounce3
+

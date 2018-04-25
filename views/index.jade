@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  script.
+    $(document).ready(function(){
+      console.log(document.cookie);
+      console.log(API_URL);
+      var dasa_token = getCookie("dasa_token");
+      console.log(dasa_token);
+      checkUserToken(function(err, user){
+      if(err){
+      window.location.href=CLIENT_URL+ "login";
+      }else{
+      console.log(user);
+      window.location.href=CLIENT_URL+ "files";
+      }
+      })
+      $("p").click(function(){
+      $(this).hide();
+      });
+    });

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .container
+        .row
+            h3 Sign in
+            .form-help
+            form(onsubmit='return signin(event)')
+            .form-group
+                label.control-label.col-sm-1.col-sm-offset-3.col-xs-2.col-xs-offset-2(for='email') Username:
+                .col-sm-4.col-xs-4
+                input#username.form-control(type='text', placeholder='Enter username')
+            .form-group
+                label.control-label.col-sm-1.col-sm-offset-3.col-xs-2.col-xs-offset-2(for='pwd') Password:
+                .col-sm-4.col-xs-4
+                input#pwd.form-control(type='password', placeholder='Enter password')
+            .form-group
+                .col-sm-offset-5.col-sm-2.col-xs-2.col-xs-offset-5
+                button.btn.btn-default(type='submit') Submit
+            .row
+                .col-sm-5.col-sm-offset-5.col-xs-offset-4.col-xs-6
+                | Didn't have an account. 
+                a(href='/ProjectFrontEnd/signup.html') Sign up
