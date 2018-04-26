@@ -1,34 +1,37 @@
 extends layout
 
 block content
+    script(src='/javascripts/files.js')
     #createFolderModal.modal.fade(role='dialog')
       .modal-dialog
         // Modal content
         .modal-content
           .modal-header
             span.close(type='button', data-dismiss='modal') ×
-            h4.modal-title Thư mục mới
+            h4.modal-title New folder
           .modal-body
             input#folderName(type='text')
           .modal-footer
             span#btn-create-folder.btn.btn-default(type='button', data-dismiss='modal') Create
             span.btn.btn-default(type='button', data-dismiss='modal') Close
-    .container
+    #renameFileModal
+    span.btn.btn-primary.col-xs-2.col-xs-offset-10(onclick='signOut()')
+      | Sign out
+    .container.file-page
       .row
         h3 Manage file
+        .folder-chosen
+          h6
         .form-help
         .row.form-upload
-          .col-xs-2
+          .col-xs-2.col-sm-1
             form#uploadFile
               span.btn.btn-primary.btn-file
                 | Upload file 
                 input#filePicker(name='file', type='file', single='')
               input#folderId(type='hidden', name='folderId')
-            //
-              <button id="selectFile" onclick="return selectFileClick();">
-              Upload file
-              </button>
-          .col-xs-2
+              input#folderType(type='hidden', name='folderType')
+          .col-xs-2.col-sm-1
             span.btn.btn-primary(data-toggle='modal', data-target='#createFolderModal')
               | Create folder
         div
@@ -37,11 +40,15 @@ block content
               tr
                 th
                   .row
+                    .col-xs-2.col-sm-1
+                      | Source
                     .col-xs-1
                     .col-xs-5
                       | Title
                     .col-xs-1
                       | Size
+                    .col-xs-2.col-lg-1
+                    .col-xs-2.col-lg-1
             tbody.list-files
               td.spinner-contains
                 .spinner

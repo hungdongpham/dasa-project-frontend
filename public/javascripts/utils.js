@@ -6,6 +6,10 @@ function getCookie(name) {
 	else
 		return null;
 }
+function signOut(){
+  document.cookie = 'dasa_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  window.location.href=CLIENT_URL+ "login";
+}
 
 var fading_circle_spinner =
 '<div class="sk-fading-circle">' +

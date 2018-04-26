@@ -227,6 +227,36 @@ td .col-xs-1, td .col-xs-5{
 button{
   width: 100%;
 }
-#createFolderModal .modal-dialog{
+#createFolderModal .modal-dialog, #renameFileModal .modal-dialog{
   width: 300px;
+}
+
+
+/******************************* file.jade ******************************/
+.container.file-page{
+  margin-top:0px;
+}
+
+.container.file-page td .col-xs-1, 
+.container.file-page td .col-xs-2, 
+.container.file-page td .col-sm-1,
+.container.file-page td .col-lg-1{
+  white-space: normal;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.file-page .col-xs-5{
+      white-space: normal;
+    display: inline-flex;
+    align-items: center;
+}
+
+.container.file-page td .col-xs-1, 
+.container.file-page td .col-xs-5,
+.container.file-page td .col-xs-2,
+.container.file-page td .col-sm-1,
+.container.file-page td .col-lg-1 {
+  border-right: 1px solid #ddd;
 }

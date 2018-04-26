@@ -1,4 +1,5 @@
 function checkUserToken(callback){
+    console.log(getCookie("dasa_token"));
 	if(getCookie("dasa_token")){
 		$.ajax({
     		url: API_URL + 'user',
@@ -116,7 +117,8 @@ function signup(event){
     		time +=  30 * 24 * 3600 * 1000;
     		now.setTime(time);
     		document.cookie = 'dasa_token=' + result.token + '; expires=' + now.toUTCString() + '; path=/';
-			window.location.href=CLIENT_URL+ "files";
+
+			// window.location.href=CLIENT_URL+ "files";
     	},
     	error: function( err ) {
     		console.log( "ERROR:  " + JSON.stringify(err) );
