@@ -118,7 +118,7 @@ function signup(event){
     		now.setTime(time);
     		document.cookie = 'dasa_token=' + result.token + '; expires=' + now.toUTCString() + '; path=/';
 
-			// window.location.href=CLIENT_URL+ "files";
+			window.location.href=CLIENT_URL+ "files";
     	},
     	error: function( err ) {
     		console.log( "ERROR:  " + JSON.stringify(err) );
