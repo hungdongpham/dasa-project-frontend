@@ -1,7 +1,7 @@
 {
   "name": "dasa-project-frontend",
   "scripts": {
-    "postdeploy": "./rainforestcmd"
+    "postdeploy": "./rainforestcmd.sh"
   },
   "env": {
   },
