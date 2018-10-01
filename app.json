@@ -1,7 +1,7 @@
 {
   "name": "dasa-project-frontend",
   "scripts": {
-    "postdeploy": "gem install rainforest-cli && rainforest --token b004a331eb5c01f63465946730bd681b run 160029"
+    "postdeploy": "./myscript.sh"
   },
   "env": {
   },
